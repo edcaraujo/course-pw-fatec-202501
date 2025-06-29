@@ -22,7 +22,7 @@ paginate: "true"
 
 ## Hand on 'Hello World
 
-- Abrir em uma nova janela do VS Code o diretório `02-pw-handson-helloworld/src/`
+- Abrir em uma nova janela do VS Code o diretório `02-pw-handson-helloworld/src/fatecare-api`
 
 ---
 
