@@ -16,7 +16,7 @@ paginate: "true"
 
 # Programação Web :mortar_board:
 
-*Hand on 'TypeORM'* 
+*Hands on 'TypeORM'* 
 
 ---
 
