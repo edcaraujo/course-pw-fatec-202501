@@ -16,7 +16,7 @@ paginate: "true"
 
 # Programação Web :mortar_board:
 
-*Hand on 'Hello World'* 
+*Hands on 'Hello World'* 
 
 ---
 
