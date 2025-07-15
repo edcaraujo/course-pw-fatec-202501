@@ -1,0 +1,9 @@
+{
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.ts"],
+    "collectCoverage": true,
+    "collectCoverageFrom": ["src/**/*.ts","!src/*.ts", "!src/migrations/**", "!src/tests/**"],
+    "coverageReporters": ["text", "lcov", "html", "clover"],
+    "verbose": true
+}
