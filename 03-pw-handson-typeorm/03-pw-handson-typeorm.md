@@ -20,7 +20,7 @@ paginate: "true"
 
 ---
 
-## Hand on 'Hello World
+## Hand on 'Typeorm'
 
 - Abrir em uma nova janela do VS Code o diretório `03-pw-handson-typeorm/src/fatecare-api`
 
