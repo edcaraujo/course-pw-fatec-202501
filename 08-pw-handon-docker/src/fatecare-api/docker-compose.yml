@@ -1,0 +1,43 @@
+services:
+  api:
+    build: .
+    container_name: fatecare-api
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    env_file:
+      - .env
+    environment:
+      DATABASE_HOST: db
+    depends_on:
+      - db
+      # db:
+      #   condition: service_healthy
+    networks:
+      - fatecare-network
+
+  db:
+    image: postgres:17-alpine
+    container_name: fatecare-db
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASS}
+      POSTGRES_DB: ${DATABASE_NAME}
+    ports:
+      - "${DATABASE_PORT:-5432}:5432"
+    # volumes:
+    #   - postgres_data:/var/lib/postgresql/data
+    # healthcheck:
+    #   test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER} -d ${DATABASE_NAME}"]
+    #   interval: 10s
+    #   timeout: 5s
+    #   retries: 5
+    networks:
+      - fatecare-network
+
+# volumes:
+#   postgres_data:
+
+# Define a rede para a comunicação entre os contêineres
+networks:
+  fatecare-network:
+    driver: bridge
